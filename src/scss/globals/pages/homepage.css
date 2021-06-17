@@ -1,0 +1,206 @@
+body {
+  cursor: none;
+  height: 100vh;
+}
+
+.cursor {
+  width: 20px;
+  height: 20px;
+  border: 3px solid  #D6007E;
+  border-radius: 50%;
+  position: absolute;
+  -webkit-transition-duration: 200ms;
+          transition-duration: 200ms;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+  -webkit-animation: cursorAnim .5s infinite alternate;
+          animation: cursorAnim .5s infinite alternate;
+  pointer-events: none;
+}
+
+@-webkit-keyframes cursorAnim3 {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(3);
+            transform: scale(3);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes cursorAnim3 {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(3);
+            transform: scale(3);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0;
+  }
+}
+
+.expand {
+  -webkit-animation: cursorAnim3 .5s forwards;
+          animation: cursorAnim3 .5s forwards;
+  border: 1px solid  #D6007E;
+}
+
+.about--row1__container,
+.about--row2__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1em;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 30px;
+}
+
+.about--row1__text,
+.about--row2__text {
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.about--title {
+  font-family: "Roboto", Arial, Helvetica;
+  color: #261C46;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.about--text {
+  font-family: "Roboto", Arial, Helvetica;
+  color: #261C46;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.btn--pink {
+  background: #D6007E;
+  color: #FFFFFF;
+}
+
+.btn--white {
+  background: #FFFFFF;
+  color: #261C46;
+  border: 2px solid #D6007E;
+}
+
+.btn {
+  margin-top: 20px;
+}
+
+@media all and (min-width: 800px) {
+  .btn--pink,
+  .btn--white {
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  }
+  .btn--pink:after,
+  .btn--white:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #D6007E;
+    z-index: -2;
+  }
+  .btn--pink:before,
+  .btn--white:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #ff24a5;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    z-index: -1;
+  }
+  .btn--pink:hover,
+  .btn--white:hover {
+    color: #fff;
+  }
+  .btn--pink:hover:before,
+  .btn--white:hover:before {
+    width: 100%;
+  }
+  .btn--pink:after {
+    background-color: #D6007E;
+  }
+  .btn--pink:hover {
+    color: #FFFFFF;
+  }
+  .btn--white:after {
+    background-color: #FFFFFF;
+  }
+  .btn--white:hover {
+    color: #261C46;
+  }
+  .about--img:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    -webkit-transition: all .3s;
+    transition: all .3s;
+  }
+  .about--row1__text {
+    padding-top: 50px;
+  }
+  .about--row2__text {
+    padding-top: 50px;
+  }
+}
+
+@media all and (min-width: 600px) {
+  main {
+    width: 80vw;
+    margin-left: 10vw;
+  }
+  .about--row1__container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-top: 50px;
+  }
+  .about--row2__container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    margin-top: 50px;
+  }
+  .about--row1__img {
+    padding-right: 50px;
+  }
+  .about--row2__img {
+    padding-left: 50px;
+  }
+  .about--img {
+    max-width: 1000px !important;
+  }
+}
+/*# sourceMappingURL=homepage.css.map */

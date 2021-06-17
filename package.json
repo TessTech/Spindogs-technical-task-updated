@@ -1,0 +1,22 @@
+{
+    "name": "spindogs-technical-test",
+    "version": "1.0.0",
+    "description": "Homepage page for my Spindogs technical test.",
+    "main": "src/js/homepage.js",
+    "style": "src/scss/main.css",
+    "scss": "src/scss/main.sass",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/TessTech/Spindogs-technical-test"
+    },
+    "browserslist": [
+    ],
+    "scripts": {
+    },
+    "author": "Tess Bryant",
+    "devDependencies": {
+    },
+    "dependencies": {
+    }
+  }
+  
